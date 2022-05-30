@@ -1,22 +1,29 @@
 body {
-	background-color: #f5faf5;
+	background-color: white;
 	text-align: center;
 }
 
 .parteSuperior {
-	background-color: #edffe3;
+	background-color: white;
+	text-align: center;
+	padding-top: 30px;	
 }
 
 .parteSuperior .titulo {
-	color: #54db6b;
+	color: black;
 	font-family:  Tahoma;
-	font-size: 50px;
+	font-weight: bold;
+	font-size: 70px;
+	margin-top: 0px;
+	margin-right: 40px;
 	margin-bottom: 0px;
+	display: inline-block;
 }
 
 .parteSuperior .reloj {
-	color: #66e2f2;
+	color: grey;
 	font-size: 23px;
 	font-family:  Tahoma;
-	margin-top: 0;	
+	margin-top: 0;
+	display: inline-block;	
 }
