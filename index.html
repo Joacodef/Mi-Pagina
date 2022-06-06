@@ -5,20 +5,20 @@
 		<meta charset="UTF-8">
 		<title>Página JDF</title>
 		<link href="estilo/estilo.css" rel="stylesheet">
-		
+		<script type = "text/JavaScript" src="js/Chart.js"></script>
 	</head>
 	<!--BODY-->
-	<body onload = "actualizarReloj();">
+	<body onload = "actualizarReloj();llamarAPI();">
 		<div class="parteSuperior">
 			<p class="titulo">Mi Página</p>
-			<p class="reloj" id="reloj">
-			</p>					
+			<p class="reloj" id="reloj"></p>					
 		</div>
-		<div class="parte1">
-			
-		</div>		
+		<div class="precioBC" id="precioBC"></div>
+		<div class="grafico" id="grafico"></div>
+		<center>
+			<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+		</center>	
 	</body>
 	<!--SCRIPT-->
-	<script type = "text/JavaScript" src="js/script.js">	
-	</script>
+	<script type = "text/JavaScript" src="js/script.js"></script>
 </html>

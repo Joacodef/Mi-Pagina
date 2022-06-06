@@ -27,3 +27,8 @@ body {
 	margin-top: 0;
 	display: inline-block;	
 }
+
+.precioBC {
+	font-family:  Tahoma;
+	font-size: 25px;
+}
