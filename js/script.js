@@ -5,12 +5,11 @@ function actualizarReloj( ) {
 	setTimeout("actualizarReloj()", 1000);
 }
 
-async function llamarAPI(){
+async function APIBitcoin() {
 	let response = await fetch('https://api.coindesk.com/v1/bpi/currentprice.json');
 	let data = await response.text(); 
 	var obj = JSON.parse(data);
 	var precioBC = parseInt(parseFloat(String(obj.bpi.USD.rate).replace(",",""))*811.81);
-	
 	var xyValues = [
 	  {x:50, y:7},
 	  {x:60, y:8},
@@ -24,7 +23,6 @@ async function llamarAPI(){
 	  {x:140, y:14},
 	  {x:150, y:15}
 	];
-
 	new Chart("myChart", {
 	  type: "scatter",
 	  data: {
@@ -35,16 +33,22 @@ async function llamarAPI(){
 	    }]
 	  }
 	});
-
-	
 	document.getElementById("precioBC").textContent = 
-		"Precio Bitcoin: $"+numberWithCommas(precioBC);
+		"Precio Bitcoin: $"+numberWithCommas(precioBC)+" clp";
+	setTimeout("llamarAPI()", 60000);
+}
 
-
+async function APIFoto() {
+	let response = await fetch('https://picsum.photos/800/300');
+	let data = await response.blob(); 
+	var imageObjectURL = URL.createObjectURL(data);
+	var image = document.createElement('img');
+	image.src = imageObjectURL;
+	var container = document.getElementById("foto");
+	container.append(image);
 	setTimeout("llamarAPI()", 60000);
 }
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 }
-
