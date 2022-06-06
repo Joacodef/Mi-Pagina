@@ -8,17 +8,17 @@
 		<script type = "text/JavaScript" src="js/Chart.js"></script>
 	</head>
 	<!--BODY-->
-	<body onload = "actualizarReloj();APIBitcoin();APIFoto();">
+	<body onload = "actualizarReloj();APIBitcoin();" id="cuerpo">
 		<div class="parteSuperior">
 			<p class="titulo">Mi Página</p>
 			<p class="reloj" id="reloj"></p>					
 		</div>
-		<div class="foto" id="foto"></div>
 		<div class="precioBC" id="precioBC"></div>
-		<div class="grafico" id="grafico">(Grafico placeholder)</div>		
-		<center>
-			<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-		</center>	
+		<div class="grafico" id="grafico">
+			<center>
+				<canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+			</center>
+		</div>				
 	</body>
 	<!--SCRIPT-->
 	<script type = "text/JavaScript" src="js/script.js"></script>

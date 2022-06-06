@@ -28,7 +28,7 @@ async function APIBitcoin() {
 	  data: {
 	    datasets: [{
 	      pointRadius: 4,
-	      pointBackgroundColor: "rgba(0,0,255,1)",
+	      pointBackgroundColor: "rgba(255,255,255,1)",
 	      data: xyValues
 	    }]
 	  }
@@ -38,17 +38,18 @@ async function APIBitcoin() {
 	setTimeout("llamarAPI()", 60000);
 }
 
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+}
+
+/* Para sacar otros objetos de una API
 async function APIFoto() {
-	let response = await fetch('https://picsum.photos/800/300');
+	let response = await fetch('https://picsum.photos/1920/1080');
 	let data = await response.blob(); 
 	var imageObjectURL = URL.createObjectURL(data);
 	var image = document.createElement('img');
 	image.src = imageObjectURL;
-	var container = document.getElementById("foto");
-	container.append(image);
+	var container = document.getElementById("cuerpo");
+	container.setBackground(image);
 	setTimeout("llamarAPI()", 60000);
-}
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-}
+}*/
